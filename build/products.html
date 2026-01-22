@@ -1,0 +1,864 @@
+<<<<<<< HEAD
+﻿<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Our Laundry Products | Sopy Detergents</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link rel="icon" href="media/icon.ico">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#111418] dark:text-white min-h-screen">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 w-full bg-white dark:bg-background-dark border-b border-[#f0f2f4] dark:border-gray-800">
+<div class="max-w-[1440px] mx-auto px-4 sm:px-10 py-3 flex items-center justify-between gap-8">
+<div class="flex items-center gap-10">
+<div class="flex items-center gap-3">
+<div>
+<img 
+        src="media/logo.png" 
+        alt="Sopy Detergents Logo"
+        class="h-20 w-auto"
+    >
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em] dark:text-white">Sopy Detergents</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="index.html">Home</a>
+<a class="text-sm font-bold text-primary border-b-2 border-primary" href="#">Products</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="about.html">About</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="contact.html">Contact</a>
+</nav>
+</div>
+<div class="flex flex-1 justify-end gap-4 items-center">
+<label class="hidden lg:flex flex-col min-w-40 h-10 max-w-64 w-full">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+<div class="text-[#617589] flex border-none bg-gray-100 dark:bg-gray-800 items-center justify-center pl-4 rounded-l-lg">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 border-none bg-gray-100 dark:bg-gray-800 focus:ring-0 h-full placeholder:text-[#617589] px-4 rounded-r-lg text-sm" placeholder="Search products..."/>
+</div>
+</label>
+<button class="relative flex items-center justify-center rounded-lg h-10 w-10 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 transition-colors">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="absolute -top-1 -right-1 bg-primary text-white text-[10px] font-bold rounded-full size-4 flex items-center justify-center">3</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-primary/20" data-alt="Customer profile placeholder image" style='background-image: url("media/profile.png");'></div>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-[1440px] mx-auto px-4 sm:px-10 py-8">
+<!-- Breadcrumbs -->
+<div class="flex items-center gap-2 mb-6">
+<a class="text-[#617589] text-sm font-medium hover:text-primary" href="#">Home</a>
+<span class="material-symbols-outlined text-sm text-[#617589]">chevron_right</span>
+<span class="text-primary text-sm font-bold">Our Products</span>
+</div>
+<!-- Page Heading -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+<div class="flex flex-col gap-2">
+<h1 class="text-4xl font-black leading-tight tracking-tight dark:text-white">Our Laundry Products</h1>
+<p class="text-[#617589] text-lg font-normal">Freshness and cleaning power in every wash.</p>
+</div>
+<div class="flex items-center gap-3">
+<p class="text-sm font-medium text-[#617589]">Sort by:</p>
+<select class="bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 rounded-lg text-sm px-4 py-2 focus:ring-primary">
+<option>Featured</option>
+<option>Price: Low to High</option>
+<option>Price: High to Low</option>
+<option>Newest Arrivals</option>
+</select>
+</div>
+</div>
+<div class="flex flex-col lg:flex-row gap-8">
+<!-- Sidebar Filters -->
+<aside class="w-full lg:w-64 flex-shrink-0">
+<div class="bg-white dark:bg-gray-900 p-6 rounded-xl border border-gray-200 dark:border-gray-800 sticky top-24">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary">filter_list</span>
+<h3 class="text-lg font-bold">Filters</h3>
+</div>
+<!-- Categories -->
+<div class="mb-8">
+<h4 class="text-sm font-bold uppercase tracking-wider text-[#617589] mb-4">Categories</h4>
+<div class="flex flex-col gap-3">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" class="rounded border-gray-300 text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-sm font-medium group-hover:text-primary transition-colors">All Products</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="rounded border-gray-300 text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-sm font-medium group-hover:text-primary transition-colors">Liquid Detergents</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="rounded border-gray-300 text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-sm font-medium group-hover:text-primary transition-colors">Powder Detergents</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="rounded border-gray-300 text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-sm font-medium group-hover:text-primary transition-colors">Industrial Strength</span>
+</label>
+</div>
+</div>
+<!-- Washing Method -->
+<div class="mb-8">
+<h4 class="text-sm font-bold uppercase tracking-wider text-[#617589] mb-4">Machine Type</h4>
+<div class="flex flex-col gap-3">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="text-primary focus:ring-primary" name="machine" type="radio"/>
+<span class="text-sm font-medium group-hover:text-primary transition-colors">Front Load</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="text-primary focus:ring-primary" name="machine" type="radio"/>
+<span class="text-sm font-medium group-hover:text-primary transition-colors">Top Load</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="text-primary focus:ring-primary" name="machine" type="radio"/>
+<span class="text-sm font-medium group-hover:text-primary transition-colors">Hand Wash</span>
+</label>
+</div>
+</div>
+<!-- Price Range -->
+<div>
+<h4 class="text-sm font-bold uppercase tracking-wider text-[#617589] mb-4">Price Range</h4>
+<input class="w-full accent-primary mb-2" type="range"/>
+<div class="flex justify-between text-xs font-bold text-[#617589]">
+<span>$0</span>
+<span>$100+</span>
+</div>
+</div>
+<button class="w-full mt-8 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-sm font-bold py-3 rounded-lg transition-colors">
+                        Clear All Filters
+                    </button>
+</div>
+</aside>
+<!-- Product Grid -->
+<div class="flex-1">
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+<!-- Product 1 -->
+<div class="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 overflow-hidden group hover:shadow-xl transition-all duration-300">
+<div class="relative h-64 overflow-hidden bg-gray-50">
+<div class="absolute top-3 left-3 z-10 bg-primary text-white text-[10px] font-black uppercase px-2 py-1 rounded">Best Seller</div>
+<img alt="Liquid Detergent Bottle" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Blue bottle of premium liquid laundry detergent" src="media/liquid soap.jpg"/>
+</div>
+<div class="p-5">
+<div class="flex justify-between items-start mb-2">
+<div>
+<p class="text-xs font-bold text-primary uppercase tracking-widest mb-1">Liquid</p>
+<h3 class="text-lg font-bold leading-snug">Liquid Soap</h3>
+</div>
+<span class="text-lg font-black text-primary">UGX 10,000</span>
+</div>
+<p class="text-sm text-[#617589] mb-4 line-clamp-2">Ultra-concentrated formula with stain-lifting enzymes for deep fiber cleaning.</p>
+<div class="flex gap-2 mb-5">
+<button class="px-3 py-1 text-xs border border-gray-200 dark:border-gray-700 rounded-md font-bold bg-gray-50 dark:bg-gray-800">20L</button>
+<button class="px-3 py-1 text-xs border border-primary text-primary rounded-md font-bold bg-primary/5">5L</button>
+<button class="px-3 py-1 text-xs border border-gray-200 dark:border-gray-700 rounded-md font-bold hover:bg-gray-50 transition-colors">3L</button>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<button class="bg-primary hover:bg-blue-600 text-white font-bold py-2.5 rounded-lg text-sm flex items-center justify-center gap-2 transition-colors">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+                                    Add
+                                </button>
+<button class="border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 font-bold py-2.5 rounded-lg text-sm transition-colors">
+                                    Inquire
+                                </button>
+</div>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 overflow-hidden group hover:shadow-xl transition-all duration-300">
+<div class="relative h-64 overflow-hidden bg-gray-50">
+<img alt="Powder Detergent Box" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Box of professional grade powder detergent" src="media/powder.png"/>
+</div>
+<div class="p-5">
+<div class="flex justify-between items-start mb-2">
+<div>
+<p class="text-xs font-bold text-primary uppercase tracking-widest mb-1">Powder</p>
+<h3 class="text-lg font-bold leading-snug">Machine Wash</h3>
+</div>
+<span class="text-lg font-black text-primary">Soon</span>
+</div>
+<p class="text-sm text-[#617589] mb-4 line-clamp-2">High-performance powder with active enzymes that penetrate deep into fabrics to remove tough stains while protecting colors and freshness.</p>
+<div class="flex gap-2 mb-5">
+<button class="px-3 py-1 text-xs border border-primary text-primary rounded-md font-bold bg-primary/5">5kg</button>
+<button class="px-3 py-1 text-xs border border-gray-200 dark:border-gray-700 rounded-md font-bold hover:bg-gray-50">10kg</button>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<button class="bg-primary hover:bg-blue-600 text-white font-bold py-2.5 rounded-lg text-sm flex items-center justify-center gap-2 transition-colors">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+                                    Add
+                                </button>
+<button class="border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 font-bold py-2.5 rounded-lg text-sm transition-colors">
+                                    Inquire
+                                </button>
+</div>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 overflow-hidden group hover:shadow-xl transition-all duration-300">
+<div class="relative h-64 overflow-hidden bg-gray-50">
+<img alt="Powder Detergent Box" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Box of professional grade powder detergent" src="media/powder.png"/>
+</div>
+<div class="p-5">
+<div class="flex justify-between items-start mb-2">
+<div>
+<p class="text-xs font-bold text-primary uppercase tracking-widest mb-1">Bars</p>
+<h3 class="text-lg font-bold leading-snug">Bar Soap</h3>
+</div>
+<span class="text-lg font-black text-primary">Soon</span>
+</div>
+<p class="text-sm text-[#617589] mb-4 line-clamp-2">Long-lasting, gentle-cleansing bar formulated to remove dirt effectively while leaving fabrics fresh, soft, and well cared for.</p>
+<div class="flex gap-2 mb-5">
+<button class="px-3 py-1 text-xs border border-primary text-primary rounded-md font-bold bg-primary/5">5kg</button>
+<button class="px-3 py-1 text-xs border border-gray-200 dark:border-gray-700 rounded-md font-bold hover:bg-gray-50">10kg</button>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<button class="bg-primary hover:bg-blue-600 text-white font-bold py-2.5 rounded-lg text-sm flex items-center justify-center gap-2 transition-colors">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+                                    Add
+                                </button>
+<button class="border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 font-bold py-2.5 rounded-lg text-sm transition-colors">
+                                    Inquire
+                                </button>
+</div>
+</div>
+</div>
+<!-- Product 4 -->
+<div class="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 overflow-hidden group hover:shadow-xl transition-all duration-300">
+<div class="relative h-64 overflow-hidden bg-gray-50">
+<div class="absolute top-3 left-3 z-10 bg-black text-white text-[10px] font-black uppercase px-2 py-1 rounded">Industrial</div>
+<img alt="Industrial Detergent Drum" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Large container of industrial strength detergent" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaKqTO7IZu0MP0aqCv0_YrSvoyaNStC-Q28gZVKMaXYPvTeUr4ZhyG3hPRY6a8BSPHw9ZchBh2s0iPWElQe2VQnyCLRhlb1qHRLBrIkkfvu1QfkeuIbdhAfTo_moQvyFBTts22hinGsJhUhcw8OOBMq3wGSDQuFjWnWi0Mk6inSsU3FFH8NylD75rqpg5C8zTsYQDwrkUqfNDunbCzX9O7bfQz-R7xIKBZWEo0Ri9WsCwqD3OVJ-bzVjwEsoZvU663qSp_Vn6Q3pNy"/>
+</div>
+<div class="p-5">
+<div class="flex justify-between items-start mb-2">
+<div>
+<p class="text-xs font-bold text-primary uppercase tracking-widest mb-1">Specialized</p>
+<h3 class="text-lg font-bold leading-snug">Heavy Duty Pro</h3>
+</div>
+<span class="text-lg font-black text-primary">Soon</span>
+</div>
+<p class="text-sm text-[#617589] mb-4 line-clamp-2">Engineered for hotel linens and industrial uniforms. Removes grease and heavy oils.</p>
+<div class="flex gap-2 mb-5">
+<button class="px-3 py-1 text-xs border border-gray-200 dark:border-gray-700 rounded-md font-bold hover:bg-gray-50">10L</button>
+<button class="px-3 py-1 text-xs border border-primary text-primary rounded-md font-bold bg-primary/5">25L</button>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<button class="bg-primary hover:bg-blue-600 text-white font-bold py-2.5 rounded-lg text-sm flex items-center justify-center gap-2 transition-colors">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+                                    Add
+                                </button>
+<button class="border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 font-bold py-2.5 rounded-lg text-sm transition-colors">
+                                    Inquire
+                                </button>
+</div>
+</div>
+</div>
+<!-- Product 5 -->
+<div class="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 overflow-hidden group hover:shadow-xl transition-all duration-300">
+<div class="relative h-64 overflow-hidden bg-gray-50">
+<img alt="Fabric Softener" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Pink bottle of scented fabric softener" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3Q5JQNDijDdJTdLSjj-jYUiuaqOj5SE0_tZDDy6dTc0ideM9k_Pze01n2-E60aDDlax6JRDZH2BBifJX6fEsQTXpY85cO69a5TmPlmD4AuUC0xoy5-xqv9kDO6yCQGKWH9PqeIzHpEgGk8q2cXE4TVhu-Hw-4uMlcsxFf4v-IbphwqMZx_qwLWjDYchKdEBJqS69WkGobxgAs5HiRXPAzBj9JY2Rr8iAaG_vlLOBGwCJlLGTbRlsracmzAI93lNyYr8z4Tubrf1QU"/>
+</div>
+<div class="p-5">
+<div class="flex justify-between items-start mb-2">
+<div>
+<p class="text-xs font-bold text-primary uppercase tracking-widest mb-1">Additives</p>
+<h3 class="text-lg font-bold leading-snug">Hand Wash</h3>
+</div>
+<span class="text-lg font-black text-primary">Soon</span>
+</div>
+<p class="text-sm text-[#617589] mb-4 line-clamp-2">Gentle yet effective formula that removes dirt and germs while keeping hands soft, moisturized, and refreshed after every wash.</p>
+<div class="flex gap-2 mb-5">
+<button class="px-3 py-1 text-xs border border-primary text-primary rounded-md font-bold bg-primary/5">1L</button>
+<button class="px-3 py-1 text-xs border border-gray-200 dark:border-gray-700 rounded-md font-bold hover:bg-gray-50">2L</button>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<button class="bg-primary hover:bg-blue-600 text-white font-bold py-2.5 rounded-lg text-sm flex items-center justify-center gap-2 transition-colors">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+                                    Add
+                                </button>
+<button class="border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 font-bold py-2.5 rounded-lg text-sm transition-colors">
+                                    Inquire
+                                </button>
+</div>
+</div>
+</div>
+<!-- Product 6 -->
+<div class="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 overflow-hidden group hover:shadow-xl transition-all duration-300">
+<div class="relative h-64 overflow-hidden bg-gray-50">
+<img alt="Stain Remover" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Small spray bottle of laundry stain remover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkAwTmJ8IVnC9PwVyXT4bcR_CmHRqaGzpqmJJGkbOhB9ZkfGrq9L2C2qEMYt0HQ_uvVWQbDXtbPrTIcee5tvgH77Qesv-IT0Jh2kJyhi0J5FWHQETGaAZVF37bIPL3X6NdEke2hGLhjXPNjFjHHvnGY2v028qXbVQLjpVHRlsIq5LCcBCxCbkUT7DiSWnPBvL42_Ck0ysIh5i9XTGsQQoqp8BPtL5EfydrITlN786LrCLcY0Du6_iHxb-2cyBPNTGIOe8PzuOaE8RD"/>
+</div>
+<div class="p-5">
+<div class="flex justify-between items-start mb-2">
+<div>
+<p class="text-xs font-bold text-primary uppercase tracking-widest mb-1">Spot Treatment</p>
+<h3 class="text-lg font-bold leading-snug">Sopy Instant Spot</h3>
+</div>
+<span class="text-lg font-black text-primary">Soon</span>
+</div>
+<p class="text-sm text-[#617589] mb-4 line-clamp-2">Precise application spray that targets coffee, wine, and grass stains instantly.</p>
+<div class="flex gap-2 mb-5">
+<button class="px-3 py-1 text-xs border border-primary text-primary rounded-md font-bold bg-primary/5">500ml</button>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<button class="bg-primary hover:bg-blue-600 text-white font-bold py-2.5 rounded-lg text-sm flex items-center justify-center gap-2 transition-colors">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+                                    Add
+                                </button>
+<button class="border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 font-bold py-2.5 rounded-lg text-sm transition-colors">
+                                    Inquire
+                                </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="flex justify-center items-center gap-2 mt-12">
+<button class="size-10 rounded-lg flex items-center justify-center border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 disabled:opacity-50">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="size-10 rounded-lg flex items-center justify-center bg-primary text-white font-bold">1</button>
+<button class="size-10 rounded-lg flex items-center justify-center hover:bg-gray-50 dark:hover:bg-gray-800 font-bold">2</button>
+<button class="size-10 rounded-lg flex items-center justify-center hover:bg-gray-50 dark:hover:bg-gray-800 font-bold">3</button>
+<span class="mx-2 text-gray-400">...</span>
+<button class="size-10 rounded-lg flex items-center justify-center hover:bg-gray-50 dark:hover:bg-gray-800 font-bold">12</button>
+<button class="size-10 rounded-lg flex items-center justify-center border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-white dark:bg-background-dark border-t border-[#f0f2f4] dark:border-gray-800 mt-20">
+<div class="max-w-[1440px] mx-auto px-4 sm:px-10 py-12">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-3 mb-6">
+<div class="size-6 bg-primary rounded flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-[16px]">bubble_chart</span>
+</div>
+<h2 class="text-md font-bold dark:text-white">Sopy Detergents</h2>
+</div>
+<p class="text-sm text-[#617589] leading-relaxed">Defining clean since 2018. We provide high-quality detergent solutions for homes and businesses worldwide.</p>
+</div>
+<div>
+<h4 class="font-bold mb-6">Shop</h4>
+<ul class="flex flex-col gap-4 text-sm text-[#617589]">
+<li><a class="hover:text-primary transition-colors" href="#">Liquid Detergents</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Powder Detergents</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Bulk Bundles</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Accessories</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-6">Support</h4>
+<ul class="flex flex-col gap-4 text-sm text-[#617589]">
+<li><a class="hover:text-primary transition-colors" href="#">Shipping Policy</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Refund &amp; Returns</a></li>
+<li><a class="hover:text-primary transition-colors" href="about.html">FAQs</a></li>
+<li><a class="hover:text-primary transition-colors" href="contact.html">Contact Us</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-6">Newsletter</h4>
+<p class="text-sm text-[#617589] mb-4">Get the latest cleaning tips and offers.</p>
+<div class="flex gap-2">
+<input class="flex-1 rounded-lg border-gray-200 dark:bg-gray-800 dark:border-gray-700 text-sm" placeholder="Email" type="email"/>
+<button class="bg-primary text-white font-bold px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors">Join</button>
+</div>
+</div>
+</div>
+<div class="pt-8 border-t border-gray-100 dark:border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-[#617589] dark:text-gray-500 text-xs">© 2026 Sopy Detergents || All rights reserved.</p>
+<div class="flex gap-6 text-[#617589] dark:text-gray-500">
+<div class="flex gap-10">
+  <!-- Phone -->
+  <a href="tel:+256701173278" class="hover:opacity-80">
+    <img src="media/icons/phone.png" class="h-5 w-5" alt="Phone">
+  </a>
+
+  <!-- WhatsApp -->
+  <a href="https://wa.me/256701173278" target="_blank" class="hover:opacity-80">
+    <img src="media/icons/whatsapp.svg" class="h-5 w-5" alt="WhatsApp">
+  </a>
+
+  <!-- Gmail -->
+  <a href="mailto:sopydetergents@gmail.com" class="hover:opacity-80">
+    <img src="media/icons/gmail.svg" class="h-5 w-5" alt="Gmail">
+  </a>
+
+  <!-- Facebook -->
+  <a href="https://facebook.com/" target="_blank" class="hover:opacity-80">
+    <img src="media/icons/facebook.svg" class="h-5 w-5" alt="Facebook">
+  </a>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</footer>
+=======
+﻿<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Our Laundry Products | Sopy Detergents</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link rel="icon" href="media/icon.ico">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#111418] dark:text-white min-h-screen">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 w-full bg-white dark:bg-background-dark border-b border-[#f0f2f4] dark:border-gray-800">
+<div class="max-w-[1440px] mx-auto px-4 sm:px-10 py-3 flex items-center justify-between gap-8">
+<div class="flex items-center gap-10">
+<div class="flex items-center gap-3">
+<div>
+<img 
+        src="media/logo.png" 
+        alt="Sopy Detergents Logo"
+        class="h-20 w-auto"
+    >
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em] dark:text-white">Sopy Detergents</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="index.html">Home</a>
+<a class="text-sm font-bold text-primary border-b-2 border-primary" href="#">Products</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="about.html">About</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="contact.html">Contact</a>
+</nav>
+</div>
+<div class="flex flex-1 justify-end gap-4 items-center">
+<label class="hidden lg:flex flex-col min-w-40 h-10 max-w-64 w-full">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+<div class="text-[#617589] flex border-none bg-gray-100 dark:bg-gray-800 items-center justify-center pl-4 rounded-l-lg">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 border-none bg-gray-100 dark:bg-gray-800 focus:ring-0 h-full placeholder:text-[#617589] px-4 rounded-r-lg text-sm" placeholder="Search products..."/>
+</div>
+</label>
+<button class="relative flex items-center justify-center rounded-lg h-10 w-10 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 transition-colors">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="absolute -top-1 -right-1 bg-primary text-white text-[10px] font-bold rounded-full size-4 flex items-center justify-center">3</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-primary/20" data-alt="Customer profile placeholder image" style='background-image: url("media/profile.png");'></div>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-[1440px] mx-auto px-4 sm:px-10 py-8">
+<!-- Breadcrumbs -->
+<div class="flex items-center gap-2 mb-6">
+<a class="text-[#617589] text-sm font-medium hover:text-primary" href="#">Home</a>
+<span class="material-symbols-outlined text-sm text-[#617589]">chevron_right</span>
+<span class="text-primary text-sm font-bold">Our Products</span>
+</div>
+<!-- Page Heading -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+<div class="flex flex-col gap-2">
+<h1 class="text-4xl font-black leading-tight tracking-tight dark:text-white">Our Laundry Products</h1>
+<p class="text-[#617589] text-lg font-normal">Freshness and cleaning power in every wash.</p>
+</div>
+<div class="flex items-center gap-3">
+<p class="text-sm font-medium text-[#617589]">Sort by:</p>
+<select class="bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 rounded-lg text-sm px-4 py-2 focus:ring-primary">
+<option>Featured</option>
+<option>Price: Low to High</option>
+<option>Price: High to Low</option>
+<option>Newest Arrivals</option>
+</select>
+</div>
+</div>
+<div class="flex flex-col lg:flex-row gap-8">
+<!-- Sidebar Filters -->
+<aside class="w-full lg:w-64 flex-shrink-0">
+<div class="bg-white dark:bg-gray-900 p-6 rounded-xl border border-gray-200 dark:border-gray-800 sticky top-24">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary">filter_list</span>
+<h3 class="text-lg font-bold">Filters</h3>
+</div>
+<!-- Categories -->
+<div class="mb-8">
+<h4 class="text-sm font-bold uppercase tracking-wider text-[#617589] mb-4">Categories</h4>
+<div class="flex flex-col gap-3">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" class="rounded border-gray-300 text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-sm font-medium group-hover:text-primary transition-colors">All Products</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="rounded border-gray-300 text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-sm font-medium group-hover:text-primary transition-colors">Liquid Detergents</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="rounded border-gray-300 text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-sm font-medium group-hover:text-primary transition-colors">Powder Detergents</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="rounded border-gray-300 text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-sm font-medium group-hover:text-primary transition-colors">Industrial Strength</span>
+</label>
+</div>
+</div>
+<!-- Washing Method -->
+<div class="mb-8">
+<h4 class="text-sm font-bold uppercase tracking-wider text-[#617589] mb-4">Machine Type</h4>
+<div class="flex flex-col gap-3">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="text-primary focus:ring-primary" name="machine" type="radio"/>
+<span class="text-sm font-medium group-hover:text-primary transition-colors">Front Load</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="text-primary focus:ring-primary" name="machine" type="radio"/>
+<span class="text-sm font-medium group-hover:text-primary transition-colors">Top Load</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="text-primary focus:ring-primary" name="machine" type="radio"/>
+<span class="text-sm font-medium group-hover:text-primary transition-colors">Hand Wash</span>
+</label>
+</div>
+</div>
+<!-- Price Range -->
+<div>
+<h4 class="text-sm font-bold uppercase tracking-wider text-[#617589] mb-4">Price Range</h4>
+<input class="w-full accent-primary mb-2" type="range"/>
+<div class="flex justify-between text-xs font-bold text-[#617589]">
+<span>$0</span>
+<span>$100+</span>
+</div>
+</div>
+<button class="w-full mt-8 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-sm font-bold py-3 rounded-lg transition-colors">
+                        Clear All Filters
+                    </button>
+</div>
+</aside>
+<!-- Product Grid -->
+<div class="flex-1">
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+<!-- Product 1 -->
+<div class="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 overflow-hidden group hover:shadow-xl transition-all duration-300">
+<div class="relative h-64 overflow-hidden bg-gray-50">
+<div class="absolute top-3 left-3 z-10 bg-primary text-white text-[10px] font-black uppercase px-2 py-1 rounded">Best Seller</div>
+<img alt="Liquid Detergent Bottle" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Blue bottle of premium liquid laundry detergent" src="media/liquid soap.jpg"/>
+</div>
+<div class="p-5">
+<div class="flex justify-between items-start mb-2">
+<div>
+<p class="text-xs font-bold text-primary uppercase tracking-widest mb-1">Liquid</p>
+<h3 class="text-lg font-bold leading-snug">Liquid Soap</h3>
+</div>
+<span class="text-lg font-black text-primary">UGX 10,000</span>
+</div>
+<p class="text-sm text-[#617589] mb-4 line-clamp-2">Ultra-concentrated formula with stain-lifting enzymes for deep fiber cleaning.</p>
+<div class="flex gap-2 mb-5">
+<button class="px-3 py-1 text-xs border border-gray-200 dark:border-gray-700 rounded-md font-bold bg-gray-50 dark:bg-gray-800">20L</button>
+<button class="px-3 py-1 text-xs border border-primary text-primary rounded-md font-bold bg-primary/5">5L</button>
+<button class="px-3 py-1 text-xs border border-gray-200 dark:border-gray-700 rounded-md font-bold hover:bg-gray-50 transition-colors">3L</button>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<button class="bg-primary hover:bg-blue-600 text-white font-bold py-2.5 rounded-lg text-sm flex items-center justify-center gap-2 transition-colors">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+                                    Add
+                                </button>
+<button class="border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 font-bold py-2.5 rounded-lg text-sm transition-colors">
+                                    Inquire
+                                </button>
+</div>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 overflow-hidden group hover:shadow-xl transition-all duration-300">
+<div class="relative h-64 overflow-hidden bg-gray-50">
+<img alt="Powder Detergent Box" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Box of professional grade powder detergent" src="media/powder.png"/>
+</div>
+<div class="p-5">
+<div class="flex justify-between items-start mb-2">
+<div>
+<p class="text-xs font-bold text-primary uppercase tracking-widest mb-1">Powder</p>
+<h3 class="text-lg font-bold leading-snug">Machine Wash</h3>
+</div>
+<span class="text-lg font-black text-primary">Soon</span>
+</div>
+<p class="text-sm text-[#617589] mb-4 line-clamp-2">High-performance powder with active enzymes that penetrate deep into fabrics to remove tough stains while protecting colors and freshness.</p>
+<div class="flex gap-2 mb-5">
+<button class="px-3 py-1 text-xs border border-primary text-primary rounded-md font-bold bg-primary/5">5kg</button>
+<button class="px-3 py-1 text-xs border border-gray-200 dark:border-gray-700 rounded-md font-bold hover:bg-gray-50">10kg</button>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<button class="bg-primary hover:bg-blue-600 text-white font-bold py-2.5 rounded-lg text-sm flex items-center justify-center gap-2 transition-colors">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+                                    Add
+                                </button>
+<button class="border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 font-bold py-2.5 rounded-lg text-sm transition-colors">
+                                    Inquire
+                                </button>
+</div>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 overflow-hidden group hover:shadow-xl transition-all duration-300">
+<div class="relative h-64 overflow-hidden bg-gray-50">
+<img alt="Powder Detergent Box" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Box of professional grade powder detergent" src="media/powder.png"/>
+</div>
+<div class="p-5">
+<div class="flex justify-between items-start mb-2">
+<div>
+<p class="text-xs font-bold text-primary uppercase tracking-widest mb-1">Bars</p>
+<h3 class="text-lg font-bold leading-snug">Bar Soap</h3>
+</div>
+<span class="text-lg font-black text-primary">Soon</span>
+</div>
+<p class="text-sm text-[#617589] mb-4 line-clamp-2">Long-lasting, gentle-cleansing bar formulated to remove dirt effectively while leaving fabrics fresh, soft, and well cared for.</p>
+<div class="flex gap-2 mb-5">
+<button class="px-3 py-1 text-xs border border-primary text-primary rounded-md font-bold bg-primary/5">5kg</button>
+<button class="px-3 py-1 text-xs border border-gray-200 dark:border-gray-700 rounded-md font-bold hover:bg-gray-50">10kg</button>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<button class="bg-primary hover:bg-blue-600 text-white font-bold py-2.5 rounded-lg text-sm flex items-center justify-center gap-2 transition-colors">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+                                    Add
+                                </button>
+<button class="border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 font-bold py-2.5 rounded-lg text-sm transition-colors">
+                                    Inquire
+                                </button>
+</div>
+</div>
+</div>
+<!-- Product 4 -->
+<div class="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 overflow-hidden group hover:shadow-xl transition-all duration-300">
+<div class="relative h-64 overflow-hidden bg-gray-50">
+<div class="absolute top-3 left-3 z-10 bg-black text-white text-[10px] font-black uppercase px-2 py-1 rounded">Industrial</div>
+<img alt="Industrial Detergent Drum" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Large container of industrial strength detergent" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaKqTO7IZu0MP0aqCv0_YrSvoyaNStC-Q28gZVKMaXYPvTeUr4ZhyG3hPRY6a8BSPHw9ZchBh2s0iPWElQe2VQnyCLRhlb1qHRLBrIkkfvu1QfkeuIbdhAfTo_moQvyFBTts22hinGsJhUhcw8OOBMq3wGSDQuFjWnWi0Mk6inSsU3FFH8NylD75rqpg5C8zTsYQDwrkUqfNDunbCzX9O7bfQz-R7xIKBZWEo0Ri9WsCwqD3OVJ-bzVjwEsoZvU663qSp_Vn6Q3pNy"/>
+</div>
+<div class="p-5">
+<div class="flex justify-between items-start mb-2">
+<div>
+<p class="text-xs font-bold text-primary uppercase tracking-widest mb-1">Specialized</p>
+<h3 class="text-lg font-bold leading-snug">Heavy Duty Pro</h3>
+</div>
+<span class="text-lg font-black text-primary">Soon</span>
+</div>
+<p class="text-sm text-[#617589] mb-4 line-clamp-2">Engineered for hotel linens and industrial uniforms. Removes grease and heavy oils.</p>
+<div class="flex gap-2 mb-5">
+<button class="px-3 py-1 text-xs border border-gray-200 dark:border-gray-700 rounded-md font-bold hover:bg-gray-50">10L</button>
+<button class="px-3 py-1 text-xs border border-primary text-primary rounded-md font-bold bg-primary/5">25L</button>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<button class="bg-primary hover:bg-blue-600 text-white font-bold py-2.5 rounded-lg text-sm flex items-center justify-center gap-2 transition-colors">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+                                    Add
+                                </button>
+<button class="border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 font-bold py-2.5 rounded-lg text-sm transition-colors">
+                                    Inquire
+                                </button>
+</div>
+</div>
+</div>
+<!-- Product 5 -->
+<div class="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 overflow-hidden group hover:shadow-xl transition-all duration-300">
+<div class="relative h-64 overflow-hidden bg-gray-50">
+<img alt="Fabric Softener" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Pink bottle of scented fabric softener" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3Q5JQNDijDdJTdLSjj-jYUiuaqOj5SE0_tZDDy6dTc0ideM9k_Pze01n2-E60aDDlax6JRDZH2BBifJX6fEsQTXpY85cO69a5TmPlmD4AuUC0xoy5-xqv9kDO6yCQGKWH9PqeIzHpEgGk8q2cXE4TVhu-Hw-4uMlcsxFf4v-IbphwqMZx_qwLWjDYchKdEBJqS69WkGobxgAs5HiRXPAzBj9JY2Rr8iAaG_vlLOBGwCJlLGTbRlsracmzAI93lNyYr8z4Tubrf1QU"/>
+</div>
+<div class="p-5">
+<div class="flex justify-between items-start mb-2">
+<div>
+<p class="text-xs font-bold text-primary uppercase tracking-widest mb-1">Additives</p>
+<h3 class="text-lg font-bold leading-snug">Hand Wash</h3>
+</div>
+<span class="text-lg font-black text-primary">Soon</span>
+</div>
+<p class="text-sm text-[#617589] mb-4 line-clamp-2">Gentle yet effective formula that removes dirt and germs while keeping hands soft, moisturized, and refreshed after every wash.</p>
+<div class="flex gap-2 mb-5">
+<button class="px-3 py-1 text-xs border border-primary text-primary rounded-md font-bold bg-primary/5">1L</button>
+<button class="px-3 py-1 text-xs border border-gray-200 dark:border-gray-700 rounded-md font-bold hover:bg-gray-50">2L</button>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<button class="bg-primary hover:bg-blue-600 text-white font-bold py-2.5 rounded-lg text-sm flex items-center justify-center gap-2 transition-colors">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+                                    Add
+                                </button>
+<button class="border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 font-bold py-2.5 rounded-lg text-sm transition-colors">
+                                    Inquire
+                                </button>
+</div>
+</div>
+</div>
+<!-- Product 6 -->
+<div class="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 overflow-hidden group hover:shadow-xl transition-all duration-300">
+<div class="relative h-64 overflow-hidden bg-gray-50">
+<img alt="Stain Remover" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Small spray bottle of laundry stain remover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkAwTmJ8IVnC9PwVyXT4bcR_CmHRqaGzpqmJJGkbOhB9ZkfGrq9L2C2qEMYt0HQ_uvVWQbDXtbPrTIcee5tvgH77Qesv-IT0Jh2kJyhi0J5FWHQETGaAZVF37bIPL3X6NdEke2hGLhjXPNjFjHHvnGY2v028qXbVQLjpVHRlsIq5LCcBCxCbkUT7DiSWnPBvL42_Ck0ysIh5i9XTGsQQoqp8BPtL5EfydrITlN786LrCLcY0Du6_iHxb-2cyBPNTGIOe8PzuOaE8RD"/>
+</div>
+<div class="p-5">
+<div class="flex justify-between items-start mb-2">
+<div>
+<p class="text-xs font-bold text-primary uppercase tracking-widest mb-1">Spot Treatment</p>
+<h3 class="text-lg font-bold leading-snug">Sopy Instant Spot</h3>
+</div>
+<span class="text-lg font-black text-primary">Soon</span>
+</div>
+<p class="text-sm text-[#617589] mb-4 line-clamp-2">Precise application spray that targets coffee, wine, and grass stains instantly.</p>
+<div class="flex gap-2 mb-5">
+<button class="px-3 py-1 text-xs border border-primary text-primary rounded-md font-bold bg-primary/5">500ml</button>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<button class="bg-primary hover:bg-blue-600 text-white font-bold py-2.5 rounded-lg text-sm flex items-center justify-center gap-2 transition-colors">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+                                    Add
+                                </button>
+<button class="border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 font-bold py-2.5 rounded-lg text-sm transition-colors">
+                                    Inquire
+                                </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="flex justify-center items-center gap-2 mt-12">
+<button class="size-10 rounded-lg flex items-center justify-center border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 disabled:opacity-50">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="size-10 rounded-lg flex items-center justify-center bg-primary text-white font-bold">1</button>
+<button class="size-10 rounded-lg flex items-center justify-center hover:bg-gray-50 dark:hover:bg-gray-800 font-bold">2</button>
+<button class="size-10 rounded-lg flex items-center justify-center hover:bg-gray-50 dark:hover:bg-gray-800 font-bold">3</button>
+<span class="mx-2 text-gray-400">...</span>
+<button class="size-10 rounded-lg flex items-center justify-center hover:bg-gray-50 dark:hover:bg-gray-800 font-bold">12</button>
+<button class="size-10 rounded-lg flex items-center justify-center border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-white dark:bg-background-dark border-t border-[#f0f2f4] dark:border-gray-800 mt-20">
+<div class="max-w-[1440px] mx-auto px-4 sm:px-10 py-12">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-3 mb-6">
+<div class="size-6 bg-primary rounded flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-[16px]">bubble_chart</span>
+</div>
+<h2 class="text-md font-bold dark:text-white">Sopy Detergents</h2>
+</div>
+<p class="text-sm text-[#617589] leading-relaxed">Defining clean since 2018. We provide high-quality detergent solutions for homes and businesses worldwide.</p>
+</div>
+<div>
+<h4 class="font-bold mb-6">Shop</h4>
+<ul class="flex flex-col gap-4 text-sm text-[#617589]">
+<li><a class="hover:text-primary transition-colors" href="#">Liquid Detergents</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Powder Detergents</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Bulk Bundles</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Accessories</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-6">Support</h4>
+<ul class="flex flex-col gap-4 text-sm text-[#617589]">
+<li><a class="hover:text-primary transition-colors" href="#">Shipping Policy</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Refund &amp; Returns</a></li>
+<li><a class="hover:text-primary transition-colors" href="about.html">FAQs</a></li>
+<li><a class="hover:text-primary transition-colors" href="contact.html">Contact Us</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-6">Newsletter</h4>
+<p class="text-sm text-[#617589] mb-4">Get the latest cleaning tips and offers.</p>
+<div class="flex gap-2">
+<input class="flex-1 rounded-lg border-gray-200 dark:bg-gray-800 dark:border-gray-700 text-sm" placeholder="Email" type="email"/>
+<button class="bg-primary text-white font-bold px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors">Join</button>
+</div>
+</div>
+</div>
+<div class="pt-8 border-t border-gray-100 dark:border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-[#617589] dark:text-gray-500 text-xs">© 2026 Sopy Detergents || All rights reserved.</p>
+<div class="flex gap-6 text-[#617589] dark:text-gray-500">
+<div class="flex gap-10">
+  <!-- Phone -->
+  <a href="tel:+256701173278" class="hover:opacity-80">
+    <img src="media/icons/phone.png" class="h-5 w-5" alt="Phone">
+  </a>
+
+  <!-- WhatsApp -->
+  <a href="https://wa.me/256701173278" target="_blank" class="hover:opacity-80">
+    <img src="media/icons/whatsapp.svg" class="h-5 w-5" alt="WhatsApp">
+  </a>
+
+  <!-- Gmail -->
+  <a href="mailto:sopydetergents@gmail.com" class="hover:opacity-80">
+    <img src="media/icons/gmail.svg" class="h-5 w-5" alt="Gmail">
+  </a>
+
+  <!-- Facebook -->
+  <a href="https://facebook.com/" target="_blank" class="hover:opacity-80">
+    <img src="media/icons/facebook.svg" class="h-5 w-5" alt="Facebook">
+  </a>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</footer>
+>>>>>>> 765bf5138ee4a21e656145815d9aec8bab45c8d3
+</body></html>
